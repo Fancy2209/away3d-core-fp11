@@ -168,7 +168,7 @@ package away3d.core.managers
 			_antiAlias = antiAlias;
 
 			if (_context3D)
-				_context3D.configureBackBuffer(backBufferWidth, backBufferHeight, antiAlias, _backBufferEnableDepthAndStencil);
+				_context3D.configureBackBuffer(backBufferWidth, backBufferHeight, antiAlias, _backBufferEnableDepthAndStencil, true, true);
 		}
 		
 		/*
@@ -526,7 +526,7 @@ package away3d.core.managers
 				// which they may not have been if View3D.render() has yet to be
 				// invoked for the first time.
 				if (_backBufferWidth && _backBufferHeight)
-					_context3D.configureBackBuffer(_backBufferWidth, _backBufferHeight, _antiAlias, _backBufferEnableDepthAndStencil);
+					_context3D.configureBackBuffer(_backBufferWidth, _backBufferHeight, _antiAlias, _backBufferEnableDepthAndStencil, true, true);
 				
 				// Dispatch the appropriate event depending on whether context was
 				// created for the first time or recreated after a device loss.
